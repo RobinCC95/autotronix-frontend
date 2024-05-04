@@ -8,39 +8,54 @@ import { SidebarModule } from 'primeng/sidebar';
 import { BadgeModule } from 'primeng/badge';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { TooltipModule } from 'primeng/tooltip';
 import { RippleModule } from 'primeng/ripple';
+import { AppConfigModule } from './config/app.config.module';
+import { AppLayoutComponent } from './app.layout.component';
+import { AppBreadcrumbComponent } from './app.breadcrumb.component';
+import { AppMenuProfileComponent } from './app.menuprofile.component';
+import { AppTopbarComponent } from './app.topbar.component';
+import { AppRightMenuComponent } from './app.rightmenu.component';
 import { AppMenuComponent } from './app.menu.component';
 import { AppMenuitemComponent } from './app.menuitem.component';
 import { RouterModule } from '@angular/router';
-import { AppTopBarComponent } from './app.topbar.component';
+import { AppSidebarComponent } from './app.sidebar.component';
 import { AppFooterComponent } from './app.footer.component';
-import { AppConfigModule } from './config/config.module';
-import { AppSidebarComponent } from "./app.sidebar.component";
-import { AppLayoutComponent } from "./app.layout.component";
+import { MegaMenuModule } from 'primeng/megamenu';
+import { ButtonModule } from 'primeng/button';
+import { MenuModule } from 'primeng/menu';
+import { StyleClassModule } from 'primeng/styleclass';
 
 @NgModule({
     declarations: [
-        AppMenuitemComponent,
-        AppTopBarComponent,
-        AppFooterComponent,
+        AppLayoutComponent,
+        AppBreadcrumbComponent,
+        AppMenuProfileComponent,
+        AppTopbarComponent,
+        AppRightMenuComponent,
         AppMenuComponent,
         AppSidebarComponent,
-        AppLayoutComponent,
+        AppMenuitemComponent,
+        AppFooterComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
+        StyleClassModule,
         InputTextModule,
         SidebarModule,
         BadgeModule,
         RadioButtonModule,
         InputSwitchModule,
+        TooltipModule,
+        MegaMenuModule,
         RippleModule,
         RouterModule,
+        ButtonModule,
+        MenuModule,
         AppConfigModule
-    ],
-    exports: [AppLayoutComponent]
+    ]
 })
 export class AppLayoutModule { }
